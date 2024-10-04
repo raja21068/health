@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourishankar Meditation</title>
+    <!-- Add Google Translate meta tag -->
+    <meta name="google-translate-customization" content="YOUR-CUSTOMIZATION-ID"></meta>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #16a085;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-btn:hover {
+            background-color: #1abc9c;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background-color: #2ecc71;
+            margin: 10px auto;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .step-title {
+            font-size: 2em;
+            color: #16a085;
+            margin-top: 40px;
+            padding-left: 10px;
+            border-left: 5px solid #16a085;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .step-description {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .step {
+            margin-bottom: 30px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #16a085;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta a:hover {
+            background-color: #1abc9c;
+        }
+
+        video,
+        audio {
+            display: block;
+            margin: 30px auto;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .step-title {
+                font-size: 1.6em;
+            }
+
+            .step-description {
+                font-size: 1em;
+            }
+
+            .cta a {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .cta a {
+                font-size: 0.9em;
+                padding: 10px 20px;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Google Translate Custom Styling */
+        #google_translate_element {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            color: #333;
+        }
+
+        #google_translate_element select {
+            border: none;
+            background-color: #16a085;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        #google_translate_element select:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Translate Dropdown -->
+    <div id="google_translate_element"></div>
+
+    <section>
+        <h1>Gourishankar Meditation</h1>
+
+        <p>Gourishankar Meditation is a powerful centering technique that works on the third eye. This meditation consists of four stages, each lasting 15 minutes. The first two stages prepare the meditator for the spontaneous experience of the third stage. That has said that if the breathing is done correctly in the first stage, the meditator will feel as if they are on Gourishankar (Mount Everest).</p>
+
+        <!-- Video Section -->
+        <video controls>
+            <source src="mp4/gourishankar.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Download Video -->
+        <div class="cta">
+            <a href="mp4/gourishankar.mp4" download="gourishankar_meditation_video.mp4" class="download-btn">Download Video</a>
+        </div>
+
+        <!-- Audio Section with Download Option -->
+        <p><strong>To practice this meditation:</strong> Download the audio and listen to it while following the steps below.</p>
+
+        <!-- Audio Section -->
+        <audio controls>
+            <source src="mp3/Gourishankar.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Download Audio -->
+        <div class="cta">
+            <a href="mp3/Gourishankar.mp3" download="gourishankar.mp3">Download Audio</a>
+        </div>
+
+        <!-- Meditation Steps -->
+        <div class="step">
+            <h2 class="step-title">1. First Stage: 15 Minutes</h2>
+            <p class="step-description">
+                Sit with your eyes closed. Inhale deeply through the nose, filling the lungs, and hold your breath for as long as possible. Then exhale gently through the mouth, keeping your lungs empty for as long as possible. Repeat this cycle.
+            </p>
+            <img src="images/shankar1.webp" alt="First Stage Image">
+        </div>
+
+        <div class="step">
+            <h2 class="step-title">2. Second Stage: 15 Minutes</h2>
+            <p class="step-description">
+                Return to normal breathing. Keeping your gaze soft and gentle, look at a flame or flashing (strobe) blue light. Remain still during this process.
+            </p>
+            <p class="step-description">
+                <strong>Note 1:</strong> Those with a neurological disorder such as epilepsy should never use a strobe or flashing light for this meditation. Instead, they can do the second stage with a blindfold.
+            </p>
+            <p class="step-description">
+                <strong>Note 2:</strong> The music in the second stage of this meditation has a rhythmic beat that is seven times the normal heartbeat. If possible, the flashing light should be a synchronized strobe at a frequency of 490 per minute. If a strobe light is not available, you can use a candle.
+            </p>
+            <img src="images/shankar2.webp" alt="Second Stage Image">
+        </div>
+
+        <div class="step">
+            <h2 class="step-title">3. Third Stage: 15 Minutes</h2>
+            <p class="step-description">
+                With eyes closed, stand up and allow your body to be loose and receptive. The subtle energies within will move your body outside your normal control. Do not move intentionally; let the movement happen on its own.
+            </p>
+            <img src="images/shankar3.webp" alt="Third Stage Image">
+        </div>
+
+        <div class="step">
+            <h2 class="step-title">4. Fourth Stage: 15 Minutes</h2>
+            <p class="step-description">
+                Keeping your eyes closed, lie down and remain still. Enter a state of silence and allow witnessing to happen naturally.
+            </p>
+            <img src="images/sleep.webp" alt="Fourth Stage Image">
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta">
+            <a href="pdf/Gourishankar.pdf">Learn More About Gourishankar Meditation</a>
+        </div>
+    </section>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

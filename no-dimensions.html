@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Dimensions Meditation</title>
+    <!-- Add Google Translate meta tag -->
+    <meta name="google-translate-customization" content="YOUR-CUSTOMIZATION-ID"></meta>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #16a085;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-btn:hover {
+            background-color: #1abc9c;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background-color: #2ecc71;
+            margin: 10px auto;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .step-title {
+            font-size: 2em;
+            color: #16a085;
+            margin-top: 40px;
+            padding-left: 10px;
+            border-left: 5px solid #16a085;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .step-description {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .step {
+            margin-bottom: 30px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #16a085;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta a:hover {
+            background-color: #1abc9c;
+        }
+
+        video,
+        audio {
+            display: block;
+            margin: 30px auto;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .step-title {
+                font-size: 1.6em;
+            }
+
+            .step-description {
+                font-size: 1em;
+            }
+
+            .cta a {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .cta a {
+                font-size: 0.9em;
+                padding: 10px 20px;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Google Translate Custom Styling */
+        #google_translate_element {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            color: #333;
+        }
+
+        #google_translate_element select {
+            border: none;
+            background-color: #16a085;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        #google_translate_element select:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Translate Dropdown -->
+    <div id="google_translate_element"></div>
+
+    <section>
+        <h1>No Dimensions Meditation</h1>
+
+        <p>No Dimensions Meditation is a centering dance and a preparation for whirling. It originated from Gurdjieffian movements and lasts for one hour, divided into three stages. The first stage involves movements coordinated with breathing, the second is whirling, and the third is lying down with closed eyes for integration.</p>
+
+        <!-- Video Section -->
+        <video controls>
+            <source src="mp4/nodimension.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Download Video -->
+        <div class="cta">
+            <a href="mp4/nodimension.mp4" download="no_dimensions_meditation_video.mp4" class="download-btn">Download Video</a>
+        </div>
+
+        <!-- Audio Section with Download Option -->
+        <p><strong>To practice this meditation:</strong> Download the audio and listen to it while following the steps below.</p>
+
+        <!-- Audio Section -->
+        <audio controls>
+            <source src="mp3/no-dimensions.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Download Audio -->
+        <div class="cta">
+            <a href="mp3/no-dimensions.mp3" download="nodimension.mp3">Download Audio</a>
+        </div>
+		<div class="step">
+<img src="images/OSHO-No-Dimensions_s.jpg" alt="First Stage Image">
+</div>
+        <!-- Meditation Steps -->
+        <div class="step">
+    <h2 class="step-title">1. First Stage: 30 Minutes</h2>
+    <p class="step-description">
+        A six-part movement repeated continuously for 30 minutes. Stand with your hands on your belly. Follow these steps:
+    </p>
+    <ul class="step-description">
+        <li><strong>1.</strong> Breathe in through the nose and bring your hands up to the heart. As you breathe out through the mouth, move your right arm and foot forward, and let your left hand return to your belly. Return to the original stance.</li>
+        <li><strong>2.</strong> Repeat the movement with your left arm and foot moving forward, while your right hand returns to the belly. Return to the original stance.</li>
+        <li><strong>3.</strong> Breathe and move your right arm and foot sideways to the right in a 90-degree turn.</li>
+        <li><strong>4.</strong> Repeat this movement with your left arm and foot moving sideways to the left in a 90-degree turn.</li>
+        <li><strong>5.</strong> Breathe and move your right arm and foot behind in a 180-degree turn.</li>
+        <li><strong>6.</strong> Repeat this movement with your left arm and foot moving behind in a 180-degree turn.</li>
+    </ul>
+    <p class="step-description">Always move from your center (hara) and use the music to maintain the correct rhythm. The dance should flow continuously and build in intensity over time. If your body falls down naturally, that's okay.</p>
+    <img src="images/no-dimension1.jpg" alt="First Stage Image">
+</div>
+
+
+        <div class="step">
+            <h2 class="step-title">2. Second Stage: Whirling (15 minutes)</h2>
+            <p class="step-description">Whirl counterclockwise, keeping your eyes open slightly and your arms stretched out. Allow the whirling to take over while breathing normally. Adjust the direction if necessary and slow down to finish.</p>
+            <img src="images/whirling.jpg" alt="Whirling Image">
+        </div>
+
+        <div class="step">
+            <h2 class="step-title">3. Third Stage: Silence (15 minutes)</h2>
+            <p class="step-description">Lie down with closed eyes, preferably on your belly. Allow witnessing to happen, and simply observe the energy flow within you.</p>
+            <img src="images/sleep.webp" alt="Silence Image">
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta">
+            <a href="pdf/no-dimensions.pdf">Learn More About No Dimensions Meditation</a>
+        </div>
+    </section>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

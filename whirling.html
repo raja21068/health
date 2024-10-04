@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whirling Meditation</title>
+    <!-- Add Google Translate meta tag -->
+    <meta name="google-translate-customization" content="YOUR-CUSTOMIZATION-ID"></meta>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #16a085;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-btn:hover {
+            background-color: #1abc9c;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background-color: #2ecc71;
+            margin: 10px auto;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .step-title {
+            font-size: 2em;
+            color: #16a085;
+            margin-top: 40px;
+            padding-left: 10px;
+            border-left: 5px solid #16a085;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .step-description {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .step {
+            margin-bottom: 30px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #16a085;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta a:hover {
+            background-color: #1abc9c;
+        }
+
+        video,
+        audio {
+            display: block;
+            margin: 30px auto;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .step-title {
+                font-size: 1.6em;
+            }
+
+            .step-description {
+                font-size: 1em;
+            }
+
+            .cta a {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .cta a {
+                font-size: 0.9em;
+                padding: 10px 20px;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Google Translate Custom Styling */
+        #google_translate_element {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            color: #333;
+        }
+
+        #google_translate_element select {
+            border: none;
+            background-color: #16a085;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        #google_translate_element select:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Translate Dropdown -->
+    <div id="google_translate_element"></div>
+
+    <section>
+        <h1>Whirling Meditation</h1>
+
+        <p>Osho Whirling Meditation is an ancient Sufi technique. While the whole body is moving, you can witness your center being silent and still. This meditation involves two stages, each designed to induce a deep state of meditative whirling.</p>
+
+        <!-- Video Section -->
+        <video controls>
+            <source src="mp4/whiriling .mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Download Video -->
+        <div class="cta">
+            <a href="mp4/whiriling .mp4" download="whirling_meditation_video.mp4" class="download-btn">Download Video</a>
+        </div>
+
+        <!-- Audio Section with Download Option -->
+        <p><strong>To practice this meditation:</strong> Download the audio and listen to it while following the steps below.</p>
+
+        <!-- Audio Section -->
+        <audio controls>
+            <source src="mp3/Whirling.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Download Audio -->
+        <div class="cta">
+            <a href="mp3/Whirling.mp3" download="whirling.mp3">Download Audio</a>
+        </div>
+
+        <!-- Meditation Steps -->
+        <div class="step">
+            <h2 class="step-title">1. First Stage: 45 Minutes</h2>
+            <p class="step-description">
+                Sufi Whirling is one of the most ancient and forceful techniques. Whirl with your eyes open, just as children twirl. Your body moves like a wheel while your inner being remains the center. Keep your body soft, eyes open but unfocused, and remain silent.
+            </p>
+            <p class="step-description">
+                Begin slowly for the first 15 minutes, and gradually increase your speed over the next 30 minutes. When you are whirling so fast that you can no longer remain upright, your body will fall naturally. Do not control or plan the fall—if your body is soft, you will land softly.
+            </p>
+            <img src="images/whirling.jpg" alt="First Stage Image">
+        </div>
+
+        <div class="step">
+            <h2 class="step-title">2. Second Stage: 15 Minutes</h2>
+            <p class="step-description">
+                After falling, immediately roll onto your stomach so your navel is in contact with the earth. Feel your body blending into the ground like a small child pressed against the mother's breast. Keep your eyes closed and remain passive and silent for at least 15 minutes.
+            </p>
+            <p class="step-description">
+                Some people may feel nauseous during the Whirling Meditation, but this should disappear within two or three days. Discontinue only if it persists.
+            </p>
+            <img src="images/sleep-back.png" alt="Second Stage Image">
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta">
+            <a href="pdf/whirling.pdf">Learn More About Whirling Meditation</a>
+        </div>
+    </section>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

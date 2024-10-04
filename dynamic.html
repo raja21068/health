@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Meditation</title>
+    <!-- Add Google Translate meta tag -->
+    <meta name="google-translate-customization" content="YOUR-CUSTOMIZATION-ID"></meta>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #16a085;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-btn:hover {
+            background-color: #1abc9c;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background-color: #2ecc71;
+            margin: 10px auto;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .step-title {
+            font-size: 2em;
+            color: #16a085;
+            margin-top: 40px;
+            padding-left: 10px;
+            border-left: 5px solid #16a085;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .step-description {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .step {
+            margin-bottom: 30px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #16a085;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta a:hover {
+            background-color: #1abc9c;
+        }
+
+        video,
+        audio {
+            display: block;
+            margin: 30px auto;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .step-title {
+                font-size: 1.6em;
+            }
+
+            .step-description {
+                font-size: 1em;
+            }
+
+            .cta a {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .cta a {
+                font-size: 0.9em;
+                padding: 10px 20px;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Google Translate Custom Styling */
+        #google_translate_element {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            color: #333;
+        }
+
+        #google_translate_element select {
+            border: none;
+            background-color: #16a085;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        #google_translate_element select:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Translate Dropdown -->
+    <div id="google_translate_element"></div>
+
+    <section>
+        <h1>Dynamic Meditation</h1>
+
+        <p>Dynamic meditation is a unique practice developed by Osho that combines physical movement, breathwork, and emotional release. This technique is designed to help participants break free from mental blocks, release stress, and connect to their inner energy. It involves active, cathartic processes that end in stillness and awareness.</p>
+
+        <!-- Video Section -->
+        <video controls>
+            <source src="mp4/dynamic.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Download Video -->
+        <div class="cta">
+            <a href="mp4/dynamic.mp4" download="dynamic_meditation_video.mp4" class="download-btn">Download Video</a>
+        </div>
+        
+        <!-- Audio Section with Download Option -->
+        <p><strong>To practice this meditation:</strong> Download the audio and listen to it while following the steps below.</p>
+
+        <!-- Audio Section -->
+        <audio controls>
+            <source src="mp3/Dynamic.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Download Audio -->
+        <div class="cta">
+            <a href="mp3/dynamic.mp3" download="Dynamic.mp3">Download Audio</a>
+        </div>
+
+        <!-- Meditation Steps -->
+        <div class="step">
+            <h2 class="step-title">1. Preparation</h2>
+            <p class="step-description">Find a quiet and private space. Wear comfortable clothing that allows freedom of movement. Ensure there are no distractions for the duration of the session.</p>
+            <img src="images/1.webp" alt="Preparation Image">
+        </div>
+
+        <div class="step">
+            <h2 class="step-title">2. Step 1: Breathing Chaos (10 minutes)</h2>
+            <p class="step-description">Stand with your arms raised, eyes closed, and breathe deeply and rapidly through your nose. Focus on chaotic breathing, allowing your body to energize itself.</p>
+            <img src="images/2.webp" alt="Breathing Chaos Image">
+        </div>
+
+        <div class="step">
+            <h2 class="step-title">3. Step 2: Catharsis (10 minutes)</h2>
+            <p class="step-description">Allow yourself to fully express any emotions you have. Shout, scream, laugh, cry, or move. This phase is about total release and letting go of emotional tension.</p>
+            <img src="images/3.webp" alt="Catharsis Image">
+        </div>
+
+        <div class="step">
+            <h2 class="step-title">4. Step 3: Jumping (10 minutes)</h2>
+            <p class="step-description">With eyes closed, jump up and down on the spot while chanting the mantra "Hoo! Hoo! Hoo!" Let the sound resonate within your body as you land on the soles of your feet.</p>
+            <img src="images/4.webp" alt="Jumping Image">
+        </div>
+
+        <div class="step">
+            <h2 class="step-title">5. Step 4: Freeze (15 minutes)</h2>
+            <p class="step-description">Suddenly freeze in your position mid-jump. Keep your body completely still. Observe the energy flowing within you while remaining in total stillness.</p>
+            <img src="images/5.webp" alt="Freeze Image">
+        </div>
+
+        <div class="step">
+            <h2 class="step-title">6. Step 5: Celebration (15 minutes)</h2>
+            <p class="step-description">After the freeze, start dancing with freedom and joy. Let your movements be an expression of your energy, celebrating life without any restrictions or inhibitions.</p>
+            <img src="images/6.webp" alt="Celebration Image">
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta">
+            <a href="pdf/dynamic.pdf">Learn More About Dynamic Meditation</a>
+        </div>
+    </section>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>
