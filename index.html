@@ -1,86 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meditation Techniques</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Explore various practices and habits to improve health and well-being.">
+    <title>Healthy Lifestyle Practices</title>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
+        /* Font Import */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap');
+
+        /* Base Reset */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
         header {
-            background-color: #8e24aa;
+            background-color: #34495e;
             color: white;
-            padding: 30px;
+            padding: 50px;
             text-align: center;
+            font-family: 'Poppins', sans-serif;
         }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+
         .container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             padding: 50px;
         }
+
+        /* Card Styling */
         .card {
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 25px;
+            padding: 0;
             text-align: center;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            color: white; /* Text color for better contrast */
+            color: white; /* White text for all cards */
+            background-color: white;
+            overflow: hidden;
         }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            background-color: inherit; /* Inherit background color for card */
+        }
+
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
-        h2 {
+
+        .card h2 {
             font-size: 1.8em;
-            margin: 0 0 15px;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
         }
-        p {
+
+        .card p {
             font-size: 1.1em;
             margin-bottom: 20px;
         }
+
         .read-more {
             display: inline-block;
             padding: 10px 25px;
             color: white;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(255, 255, 255, 0.2); /* Transparent button */
             text-decoration: none;
             border-radius: 30px;
             transition: background-color 0.3s ease-in-out;
         }
+
         .read-more:hover {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(255, 255, 255, 0.4); /* Lighten hover */
         }
 
-        /* Custom colors for each meditation technique */
-        .dynamic-meditation {
-            background-color: #ffeb3b; /* Yellow for Dynamic */
-        }
+        /* Custom Colors for Cards */
         .kundalini-meditation {
-            background-color: #e91e63; /* Pink for Kundalini */
+            background-color: #e91e63; /* Pink */
         }
+
         .mandala-meditation {
-            background-color: #00bfa5; /* Teal for Mandala */
+            background-color: #00bfa5; /* Teal */
         }
+
         .nataraj-meditation {
-            background-color: #9c27b0; /* Purple for Nataraj */
+            background-color: #9c27b0; /* Purple */
         }
+
         .no-dimensions-meditation {
-            background-color: #3f51b5; /* Indigo for No Dimensions */
+            background-color: #3f51b5; /* Indigo */
         }
+
         .nadabrahma-meditation {
-            background-color: #4caf50; /* Green for Nadabrahma */
+            background-color: #4caf50; /* Green */
         }
+
         .gourishankar-meditation {
-            background-color: #f44336; /* Red for Gourishankar */
+            background-color: #f44336; /* Red */
         }
+
         .whirling-meditation {
-            background-color: #2196f3; /* Blue for Whirling */
+            background-color: #2196f3; /* Blue */
         }
+
+        .gibberish-meditation {
+            background-color: #ff9800; /* Orange */
+        }
+
+        .devavni-meditation {
+            background-color: #673ab7; /* Deep Purple */
+        }
+    .laughter-meditation {
+            background-color: #03a9f4;
+        }
+       .chakra-meditation {
+    background-color: #9575cd; /* Soft Lavender */
+}
 
         /* Section Separator */
         .separator {
@@ -104,105 +170,223 @@
         .main-kun-hn-meditation {
             background-color: #607d8b; /* Blue Grey for Main Kun Hn */
         }
+		.akriya-meditation {
+    background-color: #8bc34a; /* Light Green for Akriya */
+}
+
+
+        /* Section Separator */
+        .separator {
+            text-align: center;
+            padding: 30px;
+            font-size: 1.5em;
+            color: #34495e;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .card h2 {
+                font-size: 1.5rem;
+            }
+
+            .card p {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Meditation Techniques</h1>
-    <p>Explore and experience the transformative power of various practices</p>
-</header>
+    <header>
+        <h1>Healthy Lifestyle Practices</h1>
+        <p>Discover the habits and practices that can improve your health and well-being.</p>
+    </header>
 
-<div class="container">
-    <!-- Dynamic Meditation -->
-    <div class="card dynamic-meditation">
-        <h2>Dynamic</h2>
-        <p>A fast and intense way to break old patterns and energize the body.</p>
-        <a href="dynamic.html" class="read-more">Read More</a>
-    </div>
+    <div class="container">
+        <!-- Eating Card -->
+        <div class="card kundalini-meditation">
+            <img src="images-e/main-1.webp" alt="Eating Healthy Food"> <!-- Add your image URL -->
+            <div class="card-content">
+                <h2>Eating</h2>
+                <p>Discover the benefits of eating balanced, seasonal meals that nourish your body and mind.</p>
+                <a href="index-food.html" class="read-more">Read More</a>
+            </div>
+        </div>
 
-    <!-- Kundalini Meditation -->
-    <div class="card kundalini-meditation">
-        <h2>Kundalini</h2>
-        <p>Best done at sunset, this practice allows the body to shake off stress.</p>
-        <a href="kundalani.html" class="read-more">Read More</a>
-    </div>
+        <!-- Get Up Early Card -->
+        <div class="card mandala-meditation">
+            <img src="images-e/main-2.webp" alt="Waking up early"> <!-- Add your image URL -->
+            <div class="card-content">
+                <h2>Get Up Early</h2>
+                <p>Learn how waking up early can enhance productivity, focus, and your overall well-being.</p>
+                <a href="getupearly-index.html" class="read-more">Read More</a>
+            </div>
+        </div>
 
-    <!-- Mandala Meditation -->
-    <div class="card mandala-meditation">
-        <h2>Mandala</h2>
-        <p>A powerful, circular-moving practice to release and center energy.</p>
-        <a href="mandala.html" class="read-more">Read More</a>
-    </div>
+        <!-- Active Lifestyle Card -->
+        <div class="card nataraj-meditation">
+            <img src="images-e/main-3.webp" alt="Exercise and Active Lifestyle"> <!-- Add your image URL -->
+            <div class="card-content">
+                <h2>Active Lifestyle</h2>
+                <p>Engage in a daily routine that includes <strong>Exercise</strong> and <strong>Meditation</strong> for a healthy body and mind.</p>
+                <a href="active-life-style.html" class="read-more">Read More</a>
+            </div>
+        </div>
 
-    <!-- Nataraj Meditation -->
-    <div class="card nataraj-meditation">
-        <h2>Nataraj</h2>
-        <p>A practice through dance, allowing the body to dissolve into movement.</p>
-        <a href="nataraj.html" class="read-more">Read More</a>
-    </div>
+        <!-- Cleaning Card -->
+        <div class="card no-dimensions-meditation">
+            <img src="images-e/cleaning.webp" alt="Cleaning and Decluttering"> <!-- Add your image URL -->
+            <div class="card-content">
+                <h2>Cleaning</h2>
+                <p>Embrace regular cleaning and decluttering practices to promote a peaceful living environment.</p>
+                <a href="cleaning.html" class="read-more">Read More</a>
+            </div>
+        </div>
 
-    <!-- No Dimensions Meditation -->
-    <div class="card no-dimensions-meditation">
-        <h2>No-Dimensions</h2>
-        <p>A standing practice combining Sufi movements with stillness.</p>
-        <a href="no-dimensions.html" class="read-more">Read More</a>
-    </div>
+        <!-- Hot Spring Bath Card -->
+        <div class="card nadabrahma-meditation">
+            <img src="images-e/hot-spring.webp" alt="Hot Spring Bath"> <!-- Add your image URL -->
+            <div class="card-content">
+                <h2>Bath in Tub</h2>
+                <p>Experience the benefits of a hot spring bath to relax, soothe muscles, and rejuvenate your mind.</p>
+                <a href="bath.html" class="read-more">Read More</a>
+            </div>
+        </div>
 
-    <!-- Nadabrahma Meditation -->
-    <div class="card nadabrahma-meditation">
-        <h2>Nadabrahma</h2>
-        <p>A humming practice that brings harmony through sound and movement.</p>
-        <a href="nadabrahma.html" class="read-more">Read More</a>
-    </div>
+        <!-- Organization Card -->
+        <div class="card gourishankar-meditation">
+            <img src="images-e/japanese_house_slippers.jpg" alt="Organization"> <!-- Add your image URL -->
+            <div class="card-content">
+                <h2>Organization</h2>
+                <p>Learn how effective organization can boost productivity and create a sense of order in your life.</p>
+                <a href="organization.html" class="read-more">Read More</a>
+            </div>
+        </div>
 
-    <!-- Gourishankar Meditation -->
-    <div class="card gourishankar-meditation">
-        <h2>Gourishankar</h2>
-        <p>Focused breathing to create an experience of inner tranquility and light.</p>
-        <a href="gourishankar.html" class="read-more">Read More</a>
-    </div>
+        <!-- Self-Improvement Card -->
+        <div class="card whirling-meditation">
+            <img src="images-e/1better.webp" alt="Self-Improvement"> <!-- Add your image URL -->
+            <div class="card-content">
+                <h2>Self-Improvement</h2>
+                <p>Adopt a mindset of continuous self-improvement through learning and personal development.</p>
+                <a href="self-improvment.html" class="read-more">Read More</a>
+            </div>
+        </div>
 
-    <!-- Whirling Meditation -->
-    <div class="card whirling-meditation">
-        <h2>Whirling</h2>
-        <p>A dynamic practice that involves whirling to create a state of ecstasy.</p>
-        <a href="whirling.html" class="read-more">Read More</a>
+        <!-- Time & Structure Card -->
+        <div class="card gibberish-meditation">
+            <img src="images-e/tiime4.webp" alt="Time Management"> <!-- Add your image URL -->
+            <div class="card-content">
+                <h2>Time & Structure</h2>
+                <p>Punctuality and structured daily routines help balance work and life. Learn how to manage your time effectively.</p>
+                <a href="time.html" class="read-more">Read More</a>
+            </div>
+        </div>
+
+<!-- Good Sleeping Card -->
+<div class="card devavni-meditation">
+    <img src="images-e/good-sleep.jpg" alt="Good Sleeping Habits"> <!-- Add your image URL -->
+    <div class="card-content">
+        <h2>Good Sleeping</h2>
+        <p>Learn the importance of good sleeping habits for improved mental and physical well-being.</p>
+        <a href="good-sleep.html" class="read-more">Read More</a>
     </div>
 </div>
 
-<!-- Separator for the new section -->
-<div class="separator">Hindu Culture or Indian Culture Meditation</div>
-
-<div class="container">
-    <!-- Kirtan Meditation -->
-    <div class="card kirtan-meditation">
-        <h2>Kirtan Meditation</h2>
-        <p>A devotional singing and chanting practice that connects deeply to the soul.</p>
-        <a href="kirtan.html" class="read-more">Read More</a>
-    </div>
-
-    <!-- OM Mantra Meditation -->
-    <div class="card om-mantra-meditation">
-        <h2>OM Mantra</h2>
-        <p>A meditation practice focused on the chanting of the primordial sound OM.</p>
-        <a href="om.html" class="read-more">Read More</a>
-    </div>
-
-    <!-- Buddha Breath Focus Meditation -->
-    <div class="card buddha-breath-meditation">
-        <h2>Buddha Breath Focus</h2>
-        <p>A meditation focusing on the breath, inspired by the teachings of Buddha.</p>
-        <a href="budh.html" class="read-more">Read More</a>
-    </div>
-
-    <!-- Main Kun Hn Meditation -->
-    <div class="card main-kun-hn-meditation">
-        <h2>Main Kun Hn</h2>
-        <p>A self-inquiry meditation that delves deeply into the question "Who am I?".</p>
-        <a href="who-am-i.html" class="read-more">Read More</a>
+<!-- Limit Cell Phone Usage Card -->
+<div class="card laughter-meditation">
+    <img src="images-e/limit-cellphone.webp" alt="Limit Cell Phone Usage"> <!-- Add your image URL -->
+    <div class="card-content">
+        <h2>Limit Cell Phone Usage</h2>
+        <p>Understand the benefits of reducing screen time for better focus and mental clarity.</p>
+        <a href="cellphone.html" class="read-more">Read More</a>
     </div>
 </div>
+
+<!-- Wear Comfortable Clothes Card -->
+<div class="card chakra-meditation">
+    <img src="images-e/comfortable-cloth.webp" alt="Wear Comfortable Clothes"> <!-- Add your image URL -->
+    <div class="card-content">
+        <h2>Wear Comfortable Clothes</h2>
+        <p>Discover how wearing the right clothing can improve your comfort, confidence, and overall well-being.</p>
+        <a href="cloth.html" class="read-more">Read More</a>
+    </div>
+</div>
+
+<!-- Mood Enhancement Techniques Card -->
+<div class="card kirtan-meditation">
+    <img src="images-e/dance.webp" alt="Mood Enhancement Techniques"> <!-- Add your image URL -->
+    <div class="card-content">
+        <h2>Mood Enhancement Techniques</h2>
+        <p>Explore techniques to lift your mood and maintain positive mental health.</p>
+        <a href="mood.html" class="read-more">Read More</a>
+    </div>
+</div>
+
+<!-- How to Drink Water Card -->
+<div class="card om-mantra-meditation">
+    <img src="images-e/drink-water.webp" alt="How to Drink Water"> <!-- Add your image URL -->
+    <div class="card-content">
+        <h2>How to Drink Water</h2>
+        <p>Learn the proper way to stay hydrated and the benefits of drinking water mindfully.</p>
+        <a href="drink-water.html" class="read-more">Read More</a>
+    </div>
+</div>
+
+
+<!-- SEX LIFE -->
+<div class="card akriya-meditation">
+    <img src="images-e/sex.jpeg" alt="Healthy Food Recipes"> <!-- Add your image URL -->
+    <div class="card-content">
+        <h2>SEX LIFE</h2>
+        <p>Explore nourishing foods and mindful practices that support vitality, balance hormones, and enhance your well-being for a thriving sex life.</p>
+        <a href="sex.html" class="read-more">Read More</a>
+    </div>
+</div>
+
+
+<!-- Healthy Food Recipes Card -->
+<div class="card buddha-breath-meditation">
+    <img src="images-e/salad-juice.webp" alt="Healthy Food Recipes"> <!-- Add your image URL -->
+    <div class="card-content">
+        <h2>Healthy Food Recipes</h2>
+        <p>Get inspired with delicious recipes designed to nourish your body and support your health goals.</p>
+        <a href="healthy-food-recipes.html" class="read-more">Read More</a>
+    </div>
+</div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Healthy Lifestyle Practices | All rights reserved.</p>
+    </footer>
 
 </body>
+
 </html>
