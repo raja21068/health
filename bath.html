@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Bathing Ritual</title>
+    <style>
+        /* Google Fonts Import */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-top: 10px;
+        }
+
+        /* Feature Image */
+        .feature-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Card Styling */
+        .card {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .card ul li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 1em;
+            color: #34495e;
+        }
+
+        .card ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container Start -->
+    <div class="container">
+
+        <!-- Header Section -->
+        <div class="header">
+            <h1>Modern Bathing Ritual</h1>
+            <p>A Guide to Relaxation and Skin Health</p>
+        </div>
+
+        <!-- Feature Image -->
+        <img src="images-e/website-duet-suite-tub1.jpg" alt="Serene, minimalist bathroom" class="feature-image">
+
+        <!-- Card Grid -->
+        <div class="card-grid">
+            <!-- Card 1: Creating a Bath Ritual -->
+            <div class="card">
+                <h2>Creating a Bath Ritual</h2>
+                <p>Turn your bath into a relaxing ritual with these steps:</p>
+                <ul>
+                    <li><strong>Set the Mood:</strong> Use soft lighting or candles to create a peaceful atmosphere.</li>
+                    <li><strong>Deep Tub (if available):</strong> Choose a deep tub that allows full immersion.</li>
+                    <li><strong>Natural Materials:</strong> Add wooden stools, bamboo mats, or stone accents.</li>
+                    <li><strong>Calming Scents:</strong> Use eucalyptus or cedarwood essential oils (diluted).</li>
+                    <li><strong>Avoid Soap in the Tub:</strong> For soaking only, avoid soaps to keep water pure.</li>
+                </ul>
+            </div>
+
+            <!-- Card 2: Key Aspects of Bathing -->
+            <div class="card">
+                <h2>Key Aspects of Bathing</h2>
+                <ul>
+                    <li><strong>Deep Soaking:</strong> Deep tubs offer a cocooning, meditative experience.</li>
+                    <li><strong>Pre-Bath Cleanse:</strong> Shower before entering the tub to maintain water purity.</li>
+                    <li><strong>Warm, Reusable Water:</strong> Bathwater is kept warm and reused within a day.</li>
+                    <li><strong>Quiet Reflection:</strong> Enjoy a meditative soak with calming music or silence.</li>
+                    <li><strong>Minimalist Design:</strong> Incorporate wood and stone for a serene environment.</li>
+                    <li><strong>Health Benefits:</strong> Improved circulation, stress relief, and relaxation.</li>
+                </ul>
+            </div>
+
+            <!-- Card 3: Skin-Healthy Bathing Tips -->
+            <div class="card">
+                <h2>Skin-Healthy Bathing Tips</h2>
+                <ul>
+                    <li><strong>Limit Bath Time:</strong> Keep baths to 10-15 minutes to protect natural oils.</li>
+                    <li><strong>Use Gentle Cleansers:</strong> Opt for mild, oil-based cleansers to avoid drying out.</li>
+                    <li><strong>Moisturize Immediately:</strong> Apply lotion while skin is damp to lock in moisture.</li>
+                    <li><strong>Cool Hair Rinse:</strong> Rinse hair with cool water to add shine and prevent dryness.</li>
+                    <li><strong>Stay Hydrated:</strong> Drink a glass of water before and after to support skin health.</li>
+                </ul>
+            </div>
+
+            <!-- Card 4: Bathing Habits -->
+            <div class="card">
+                <h2>Bathing Habits</h2>
+                <ul>
+                    <li><strong>Hot Baths and Onsen:</strong> Taking hot baths, especially in natural hot springs, helps relax muscles, improve circulation, and promote better sleep.</li>
+                    <li><strong>Evening Bath Routine:</strong> An evening bath can help relax after a long day, enhancing sleep quality and mental relaxation.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- Container End -->
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bathing Ritual Guide | A Journey to Relaxation and Skin Health</p>
+    </footer>
+
+</body>
+</html>

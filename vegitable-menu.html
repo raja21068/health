@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f2e7;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #8d6e63;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1em;
+            color: #555;
+        }
+        .section-title {
+            font-size: 1.8em;
+            color: #795548;
+            margin: 30px 0 10px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .icon {
+            font-size: 1.5em;
+            color: #8d6e63;
+        }
+        .items-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            padding: 10px 0;
+            list-style-type: none;
+        }
+        .items-grid li {
+            font-size: 1em;
+            padding: 5px;
+            background: #f8f1e9;
+            border-radius: 5px;
+            color: #6d4c41;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            .items-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 500px) {
+            .items-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Shopping List</h1>
+    <div class="intro">
+        To make healthy recipes with ease, it's important to have a well-stocked kitchen. Here’s a list of essential ingredients, divided into fresh items to buy as needed and dry items to store for longer periods.
+    </div>
+
+    <!-- Fresh Ingredients Section -->
+    <div class="section-title"><span class="icon">🥬</span>Fresh Ingredients</div>
+    
+    <h3>1. Fruits</h3>
+    <ul class="items-grid">
+        <li>Lemon</li><li>Melons</li><li>Papaya</li><li>Coconut</li><li>Apple</li>
+        <li>Pear</li><li>Orange</li><li>Mango</li><li>Banana</li><li>Pomegranate</li>
+        <li>Peach</li><li>Plum</li><li>Berries</li><li>Grapes</li><li>Sapota (chikoo)</li>
+        <li>Kiwi</li><li>Pineapple</li><li>Watermelon</li><li>Avocado</li><li>Fig</li>
+        <li>Guava</li><li>Cantaloupe</li><li>Passion Fruit</li><li>Lychee</li><li>Dragon Fruit</li>
+    </ul>
+
+    <h3>2. Vegetables</h3>
+    <ul class="items-grid">
+        <li>Ash Gourd</li><li>Bottle Gourd</li><li>Ridge Gourd</li><li>Spinach</li><li>Lettuce</li>
+        <li>Rocket Leaves</li><li>Cucumbers</li><li>Celery</li><li>Parsley</li><li>Zucchini</li>
+        <li>Tomatoes</li><li>Bell Peppers</li><li>Beetroot</li><li>Carrots</li><li>Pumpkin</li>
+        <li>Cabbage</li><li>Peas</li><li>Broccoli</li><li>Green Beans</li><li>Cauliflower</li>
+        <li>Potatoes</li><li>Okra</li><li>Sweet Potatoes</li><li>Brussels Sprouts</li><li>Eggplant</li>
+    </ul>
+
+    <h3>3. Herbs</h3>
+    <ul class="items-grid">
+        <li>Coriander</li><li>Mint</li><li>Bay Leaf</li><li>Curry Leaves</li><li>Thyme</li>
+        <li>Oregano</li><li>Basil</li><li>Rosemary</li><li>Lemongrass</li><li>Dill</li>
+        <li>Sage</li><li>Tarragon</li><li>Chives</li><li>Marjoram</li><li>Parsley</li>
+    </ul>
+
+    <!-- Dry Ingredients Section -->
+    <div class="section-title"><span class="icon">🌾</span>Dry Ingredients</div>
+
+    <h3>1. Nuts and Seeds</h3>
+    <ul class="items-grid">
+        <li>Almonds</li><li>Walnuts</li><li>Cashews</li><li>Pistachios</li><li>Peanuts</li>
+        <li>Pumpkin Seeds</li><li>Sunflower Seeds</li><li>Chia Seeds</li><li>Flax Seeds</li>
+        <li>Sesame Seeds</li><li>Poppy Seeds</li><li>Macadamia Nuts</li><li>Hazelnuts</li><li>Brazil Nuts</li>
+    </ul>
+
+    <h3>2. Seeds for Sprouting</h3>
+    <ul class="items-grid">
+        <li>Alfalfa</li><li>Clover</li><li>Fenugreek</li><li>Radish</li><li>Lentils</li>
+        <li>Mung Beans</li><li>Chickpeas</li><li>Broccoli Seeds</li>
+    </ul>
+
+    <h3>3. Grains and Legumes</h3>
+    <ul class="items-grid">
+        <li>Whole Wheat Flour</li><li>Brown Rice</li><li>Quinoa</li><li>Moong Daal</li><li>Oats</li>
+        <li>Barley</li><li>Buckwheat</li><li>Lentils</li><li>Millet</li><li>Farro</li>
+    </ul>
+
+    <h3>4. Spices and Condiments</h3>
+    <ul class="items-grid">
+        <li>Rock Salt</li><li>Green Chilies</li><li>Fresh Ginger</li><li>Cinnamon</li><li>Green Cardamom</li>
+        <li>Fennel Seeds</li><li>Cumin</li><li>Black Pepper</li><li>Black Salt</li><li>Saffron</li>
+        <li>Cacao Powder</li><li>Cacao Nibs</li><li>Carob Powder</li><li>Galangal</li><li>Vanilla Powder</li>
+        <li>Turmeric</li><li>Paprika</li><li>Clove</li><li>Mustard Seeds</li><li>Nutmeg</li>
+    </ul>
+
+    <h3>5. Dry Herbs</h3>
+    <ul class="items-grid">
+        <li>Dried Basil</li><li>Dried Oregano</li><li>Dried Rosemary</li><li>Dried Thyme</li><li>Dried Mint</li>
+        <li>Dried Dill</li><li>Dried Marjoram</li><li>Dried Parsley</li><li>Dried Tarragon</li>
+    </ul>
+
+    <h3>6. Sweeteners</h3>
+    <ul class="items-grid">
+        <li>Dates</li><li>Raisins</li><li>Unprocessed Jaggery</li><li>Honey</li><li>Maple Syrup</li>
+        <li>Agave Nectar</li><li>Stevia Leaves</li>
+    </ul>
+</div>
+
+</body>
+</html>

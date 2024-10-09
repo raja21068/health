@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Meal Plans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #5a67d8;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #e2e8f0;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+        }
+        .tab-button.active {
+            background-color: #5a67d8;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .accordion {
+            margin: 10px 0;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .accordion-header {
+            background-color: #edf2f7;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .accordion-header:hover {
+            background-color: #e2e8f0;
+        }
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            background-color: #f7fafc;
+            line-height: 1.6;
+        }
+        .accordion.active .accordion-content {
+            display: block;
+        }
+        .progress-tracker {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .progress-item {
+            width: 50px;
+            height: 50px;
+            background-color: #e2e8f0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: #5a67d8;
+            transition: background-color 0.3s;
+        }
+        .progress-item.active {
+            background-color: #5a67d8;
+            color: white;
+        }
+        .meal-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #edf2f7;
+        }
+        .meal-icon {
+            width: 50px;
+            height: 50px;
+        }
+        @media (max-width: 600px) {
+            .progress-tracker {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .progress-item {
+                width: 100%;
+                border-radius: 8px;
+                padding: 10px 0;
+            }
+            .tabs {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Interactive Meal Plans</h1>
+
+    <!-- Progress Tracker -->
+    <div class="progress-tracker">
+        <div class="progress-item" id="prebreakfast">9 AM</div>
+        <div class="progress-item" id="breakfast">11 AM</div>
+        <div class="progress-item" id="lunch">1 PM</div>
+        <div class="progress-item" id="midmeal">4 PM</div>
+        <div class="progress-item" id="dinner">7 PM</div>
+    </div>
+
+    <!-- Tabs for Meal Plans -->
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab('fastingPlan')">Fasting Plan</button>
+        <button class="tab-button" onclick="openTab('weightLossPlan')">Weight Loss Plan</button>
+        <button class="tab-button" onclick="openTab('kidsActivePlan')">Kids & Active Plan</button>
+    </div>
+
+    <!-- Tab Content for Fasting Plan -->
+    <div id="fastingPlan" class="tab-content active">
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">9:00 AM - Warm Lemon Water</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="lemon water" class="meal-icon">
+                    <p>A detoxifying start to your day, warm lemon water helps cleanse the body and boost metabolism.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">11:00 AM - Fresh Vegetable Juice</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="vegetable juice" class="meal-icon">
+                    <p>Replenish your body with vitamins and hydration from a fresh vegetable juice.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">1:00 PM - Light Soup</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="soup" class="meal-icon">
+                    <p>A light, nourishing soup to keep your energy levels steady.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">4:00 PM - Herbal Tea</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="herbal tea" class="meal-icon">
+                    <p>Relax with a soothing cup of herbal tea, perfect for digestion and relaxation.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">7:00 PM - Vegetable Broth</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="vegetable broth" class="meal-icon">
+                    <p>End the day with a light, warm vegetable broth to aid digestion.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab Content for Weight Loss Plan -->
+    <div id="weightLossPlan" class="tab-content">
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">9:00 AM - Coconut Water</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="coconut water" class="meal-icon">
+                    <p>A refreshing, hydrating drink to start your day.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">11:00 AM - Fresh Fruit Smoothie</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="fruit smoothie" class="meal-icon">
+                    <p>A delicious smoothie with seasonal fruits for a natural energy boost.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">1:00 PM - Whole Grain Salad</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="salad" class="meal-icon">
+                    <p>Fresh vegetables and whole grains for a satisfying, healthy lunch.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">4:00 PM - Green Tea</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="green tea" class="meal-icon">
+                    <p>A calming green tea to keep you energized without calories.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">7:00 PM - Mixed Vegetable Soup</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="vegetable soup" class="meal-icon">
+                    <p>A wholesome soup packed with vegetables to end the day.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab Content for Kids & Active Plan -->
+    <div id="kidsActivePlan" class="tab-content">
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">9:00 AM - Smoothie with Almond Milk</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="smoothie" class="meal-icon">
+                    <p>A creamy smoothie with almond milk and fresh fruits to fuel the day.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">11:00 AM - Seasonal Fruits</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="fruits" class="meal-icon">
+                    <p>A variety of seasonal fruits for essential vitamins and hydration.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">1:00 PM - Grain Meal with Salad</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="grain meal" class="meal-icon">
+                    <p>A nutritious grain meal with fresh vegetables for growing kids.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">4:00 PM - Fresh Juice</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="juice" class="meal-icon">
+                    <p>A refreshing juice to keep active individuals hydrated.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">7:00 PM - Light Salad</div>
+            <div class="accordion-content">
+                <div class="meal-card">
+                    <img src="https://via.placeholder.com/50" alt="salad" class="meal-icon">
+                    <p>A light salad for a balanced, nutritious end to the day.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+
+        document.querySelectorAll('.tab-button').forEach(button => button.classList.remove('active'));
+        document.querySelector(`[onclick="openTab('${tabId}')"]`).classList.add('active');
+    }
+
+    function toggleAccordion(header) {
+        header.parentElement.classList.toggle('active');
+    }
+
+    // Progress Tracker Simulation
+    const mealTimes = ["prebreakfast", "breakfast", "lunch", "midmeal", "dinner"];
+    let currentMealIndex = 0;
+
+    function updateProgressTracker() {
+        if (currentMealIndex < mealTimes.length) {
+            document.getElementById(mealTimes[currentMealIndex]).classList.add("active");
+            currentMealIndex++;
+        }
+    }
+    
+    setInterval(updateProgressTracker, 5000);  // Update every 5 seconds for demo; adjust for real-time use
+</script>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Get up early and improve your life through healthy habits like meditation, exercise, and learning new skills.">
+    <title>Get Up Early for a Better Life</title>
+
+    <style>
+        /* Font Import */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap');
+
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(135deg, #6a1b9a, #8e44ad);
+            color: white;
+            padding: 60px 30px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        header ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* Spacing between the items */
+            font-size: 1.2rem;
+        }
+
+        header ul li {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        header ul li::before {
+            content: '✔'; /* Checkmark icon */
+            margin-right: 8px;
+            color: #00ffae;
+        }
+
+        /* Optional Animation */
+        header h1, header p {
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        header ul {
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        /* Card Styling */
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 0;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            width: 320px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            color: #34495e;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .card a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #34495e;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .card a:hover {
+            background-color: #2c3e50;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            header ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .container {
+                padding: 10px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+            }
+
+            .card h3 {
+                font-size: 1.6rem;
+            }
+
+            .card p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Get Up Early for a Better Life</h1>
+        <p>Spend 1 extra hour to improve your health, productivity, and well-being.</p>
+        <ul>
+            <li>Improved health</li>
+            <li>Increased productivity</li>
+            <li>Reduced stress</li>
+            <li>Improved mood</li>
+            <li>Increased self-discipline</li>
+        </ul>
+    </header>
+
+    <!-- Card Section -->
+    <div class="container">
+        <!-- Meditation + Exercise Card -->
+        <div class="card">
+            <img src="images-e/mainkunhn1.webp" alt="Meditation and Exercise"> <!-- Replace with actual image URL -->
+            <div class="card-content">
+                <h3>Meditation + Exercise</h3>
+                <p>Spend 1 hour in the morning combining meditation and exercise to start your day with calmness and energy.</p>
+                <a href="https://raja21068.github.io/yoga/">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Exercise Only Card -->
+        <div class="card">
+            <img src="images-e/exercise.webp" alt="Exercise"> <!-- Replace with actual image URL -->
+            <div class="card-content">
+                <h3>Exercise</h3>
+                <p>Dedicate 30 minutes to physical exercise for a healthier body and a fresh mind.</p>
+                <a href="https://www.youtube.com/@FitnessClub-g8r">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Learn New Skills Card -->
+        <div class="card">
+            <img src="images-e/skills.jpeg" alt="Learn New Skills"> <!-- Replace with actual image URL -->
+            <div class="card-content">
+                <h3>Learn New Skills</h3>
+                <p>Spend 30 minutes learning something new every day to improve your skills and knowledge.</p>
+                <a href="https://www.youtube.com/@PianoteOfficial">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

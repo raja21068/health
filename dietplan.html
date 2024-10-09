@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Meal Plan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+        h1 {
+            color: #4a5568;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .description {
+            color: #4a5568;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .meal-plans {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            justify-content: space-between;
+        }
+        .plan-card {
+            flex: 1;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .plan-card.fasting { background-color: #a0aec0; }
+        .plan-card.weightloss { background-color: #ecc94b; }
+        .plan-card.kids { background-color: #63b3ed; }
+        .plan-header {
+            font-size: 1.8em;
+            margin-bottom: 8px;
+        }
+        .plan-description {
+            font-size: 1em;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        .meal-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .meal-table th, .meal-table td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        .meal-table th {
+            background-color: #edf2f7;
+            color: #2d3748;
+            font-size: 1.1em;
+        }
+        .meal-time {
+            font-weight: bold;
+            color: #2d3748;
+        }
+        .note {
+            background-color: #e6fffa;
+            color: #2b7a78;
+            padding: 20px;
+            border-radius: 8px;
+            line-height: 1.6;
+            margin-top: 20px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Choose Your Meal Plan</h1>
+    <div class="description">
+        <p>We offer three different meal plans tailored for various needs. Choose the one that suits your lifestyle and health goals best. Each plan follows a structured routine with balanced nutrition.</p>
+    </div>
+
+    <div class="meal-plans">
+        <!-- Fasting Plan Card -->
+        <div class="plan-card fasting">
+            <div class="plan-header">Fasting Plan</div>
+            <div class="plan-description">Ideal for detox or during acute illnesses (e.g., cold, fever).</div>
+        </div>
+
+        <!-- Weight Loss Plan Card -->
+        <div class="plan-card weightloss">
+            <div class="plan-header">Weight Loss Plan</div>
+            <div class="plan-description">Best for those looking to maintain or lose weight with balanced nutrition.</div>
+        </div>
+
+        <!-- Kids & Active Plan Card -->
+        <div class="plan-card kids">
+            <div class="plan-header">Kids & Active Plan</div>
+            <div class="plan-description">Designed for children and those engaged in high physical activity.</div>
+        </div>
+    </div>
+
+    <!-- Fasting Plan Table -->
+    <table class="meal-table">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Fasting Plan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="meal-time">9:00 AM</td>
+                <td>Warm Lemon Water or Coconut Water</td>
+            </tr>
+            <tr>
+                <td class="meal-time">11:00 AM</td>
+                <td>Any Fresh Vegetable Juice</td>
+            </tr>
+            <tr>
+                <td class="meal-time">1:00 PM</td>
+                <td>Light Soup or Fresh Fruit</td>
+            </tr>
+            <tr>
+                <td class="meal-time">4:00 PM</td>
+                <td>Herbal Tea or Coconut Water</td>
+            </tr>
+            <tr>
+                <td class="meal-time">7:00 PM</td>
+                <td>Vegetable Broth or Coconut Water</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Weight Loss Plan Table -->
+    <table class="meal-table">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Weight Loss Plan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="meal-time">9:00 AM</td>
+                <td>Warm Lemon Water or Coconut Water</td>
+            </tr>
+            <tr>
+                <td class="meal-time">11:00 AM</td>
+                <td>Fresh Fruit Smoothie or Seasonal Fruits</td>
+            </tr>
+            <tr>
+                <td class="meal-time">1:00 PM</td>
+                <td>Whole Grain Salad or Steamed Vegetables</td>
+            </tr>
+            <tr>
+                <td class="meal-time">4:00 PM</td>
+                <td>Coconut Water or Green Tea</td>
+            </tr>
+            <tr>
+                <td class="meal-time">7:00 PM</td>
+                <td>Vegetable Soup or Mixed Green Salad</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Kids & Active Plan Table -->
+    <table class="meal-table">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Kids & Active Plan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="meal-time">9:00 AM</td>
+                <td>Fresh Fruit Smoothie with Almond Milk</td>
+            </tr>
+            <tr>
+                <td class="meal-time">11:00 AM</td>
+                <td>Seasonal Fruits or a Small Bowl of Nuts</td>
+            </tr>
+            <tr>
+                <td class="meal-time">1:00 PM</td>
+                <td>Grain Meal with Fresh Salad</td>
+            </tr>
+            <tr>
+                <td class="meal-time">4:00 PM</td>
+                <td>Herbal Tea or Fresh Juice</td>
+            </tr>
+            <tr>
+                <td class="meal-time">7:00 PM</td>
+                <td>Vegetable Soup or Light Salad</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="note">
+        <strong>General Guidelines:</strong>
+        <ul>
+            <li>Maintain a 12-16 hour fasting period for the Weight Loss Plan, adjusting as needed.</li>
+            <li>For active individuals or children, it’s advised not to skip any meals to support growth and energy needs.</li>
+            <li>Stay hydrated throughout the day, especially between meals.</li>
+            <li>Avoid heavy or processed foods to get the best results from these meal plans.</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
