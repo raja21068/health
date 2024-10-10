@@ -21,9 +21,11 @@
             text-align: center;
             color: #5a67d8;
             margin-bottom: 20px;
+            font-size: 2em;
         }
         .law-card {
             display: flex;
+            flex-direction: row;
             border-radius: 10px;
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -37,6 +39,7 @@
             justify-content: center;
             flex-direction: column;
             text-align: center;
+            box-sizing: border-box;
         }
         .avoid {
             background-color: #ffe6e6;
@@ -60,26 +63,40 @@
             line-height: 1.5;
             max-width: 300px;
         }
+
+        /* Media Queries for Mobile Devices */
         @media (max-width: 768px) {
             .law-card {
                 flex-direction: column;
-                text-align: center;
+                margin-bottom: 15px;
             }
-            .law-card .avoid, .law-card .follow {
-                width: 100%;
+            .law-heading {
+                font-size: 1.3em;
+            }
+            h1 {
+                font-size: 1.8em;
             }
         }
+
         @media (max-width: 500px) {
-            .law-card {
-                overflow-x: auto;
-                display: block;
-                white-space: nowrap;
+            body {
+                padding: 10px;
             }
-            .law-card div {
-                display: inline-block;
-                white-space: normal;
-                width: 90vw;
-                box-sizing: border-box;
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.6em;
+            }
+            .law-card {
+                margin-bottom: 10px;
+            }
+            .law-heading {
+                font-size: 1.2em;
+            }
+            .law-description {
+                font-size: 0.9em;
+                line-height: 1.4;
             }
         }
     </style>
