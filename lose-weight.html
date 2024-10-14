@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Habits for Weight Loss</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f9fb;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Wrapper for Centering Content */
+        .wrapper {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Main Content */
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Habit Cards */
+        .habit-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .habit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .habit-card h3 {
+            color: #4caf50;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #4caf50;
+            padding-bottom: 0.3rem;
+        }
+
+        .habit-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .habit-card p {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            color: #555;
+        }
+
+        .habit-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+
+        .habit-card ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+            background: #f1f1f1;
+            padding: 8px 12px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+       
+
+        .habit-card button, .habit-card a {
+            background-color: #4caf50;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .habit-card button:hover, .habit-card a:hover {
+            background-color: #388e3c;
+        }
+
+        /* Table Styling */
+        .meal-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .meal-table th, .meal-table td {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .meal-table th {
+            background-color: #4caf50;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Section Styling */
+        .section {
+            background-color: #e8f5e9;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #2e7d32;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        .section .card-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .section .card {
+            flex: 1;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .section .card h3 {
+            color: #388e3c;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section .card ul {
+            list-style-type: none;
+            padding-left: 0;
+            text-align: left;
+        }
+
+        .section .card ul li {
+            padding-left: 1.5rem;
+            position: relative;
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+            background: #f1f1f1;
+            padding: 8px 12px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0.8rem;
+        }
+
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .habit-card h3, .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .card-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Healthy Habits for Weight Loss</h1>
+            <p>Discover habits that support a balanced, sustainable weight loss journey.</p>
+        </header>
+
+        <main>
+            <!-- Habit 4: Intermittent Fasting -->
+            <div class="habit-card">
+                <h3>1. Try Intermittent Fasting</h3>
+                <img src="images-e/16-2.png" alt="Intermittent Fasting">
+                <p>Intermittent fasting involves keeping your meals within a specific 8 to 10-hour window each day, allowing your body more time to burn calories. It may help you eat less and feel more energized.</p>
+                <ul>
+                    <li>Choose an eating window, such as 8:00 am to 4:00 pm.</li>
+                    <li>Eat meals during your most active hours.</li>
+                    <li>Give your body plenty of time to rest and digest.</li>
+                </ul>
+               
+            </div>
+
+            <!-- Habit 2: Exercise Regularly -->
+            <div class="habit-card">
+                <h3>2. Exercise Regularly</h3>
+                <img src="images-e/exercise.webp" alt="Exercise">
+                <p>Dedicate 30 minutes to physical exercise for a healthier body and a fresh mind.</p>
+                <a href="https://www.youtube.com/@FitnessClub-g8r">Learn More</a>
+            </div>
+
+            <!-- Diet Plan Table -->
+            <div class="habit-card">
+                <h3>3. Diet Plan</h3>
+                <table class="meal-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Weight Loss Plan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9:00 AM</td>
+                            <td>Warm Lemon Water or Coconut Water</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 AM</td>
+                            <td>Fresh Fruit Smoothie or Seasonal Fruits</td>
+                        </tr>
+                        <tr>
+                            <td>1:00 PM</td>
+                            <td>Whole Grain Salad or Steamed Vegetables</td>
+                        </tr>
+                        <tr>
+                            <td>4:00 PM</td>
+                            <td>Coconut Water or Green Tea</td>
+                        </tr>
+                        <tr>
+                            <td>7:00 PM</td>
+                            <td>Vegetable Soup or Mixed Green Salad</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Healthy Diet Changes -->
+            <div class="habit-card">
+                <h3>4. Fill Your Plate Half-Full of Vegetables &amp; Fruits</h3>
+                <img src="images-e/food-guide-visual-en.webp" alt="Plate full of vegetables and fruits">
+                <p>Vegetables and fruits are loaded with nutrients and fiber, and they’re lower in calories than most other foods. Fill half of your plate with 1 to 2 servings of vegetables or fruits at each meal to fill up faster and stay full longer.</p>
+                <ul>
+                    <li>Steam, stir-fry, roast, or boil your vegetables.</li>
+                    <li>Include raw vegetables or a side salad if you don't want to cook.</li>
+                    <li>Opt for fresh whole fruits like apples or bananas when you're in a hurry.</li>
+                </ul>
+            </div>
+
+            <!-- Processed Foods Section -->
+            <div class="section">
+                <h2>5. Don't Eat Processed Foods</h2>
+                <p>Limiting highly processed foods is essential to a healthy eating pattern. Processed foods often contain high levels of sodium, sugars, and unhealthy fats.</p>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Examples of Processed Foods</h3>
+                        <ul>
+                            <li>Sugary Drinks</li>
+                            <li>Potato Chips &amp; Pretzels</li>
+                            <li>Ice Cream &amp; Frozen Desserts</li>
+                            <li>Processed Meats</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Benefits of Limiting Processed Foods</h3>
+                        <ul>
+                            <li>Reduced Sodium Intake</li>
+                            <li>Lower Risk of Obesity & Diabetes</li>
+                            <li>Improved Heart Health</li>
+                            <li>Better Overall Nutrition</li>
+                        </ul>
+                    </div>
+                </div>
+                <p><strong>Tip:</strong> Replace sugary drinks with water, avoid processed meats, and choose whole, fresh foods as often as possible.</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
