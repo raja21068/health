@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Skincare Products</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fonts & Colors */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            font-family: 'Georgia', serif;
+            color: #4A7C59;
+        }
+        header, footer {
+            background-color: #4A7C59;
+            color: #fff;
+        }
+       header {
+            background-color: #4A7C59; /* Darker green */
+            color: #f8f9fa; /* Lighter font color for readability */
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            color: #ffffff; /* Bright white for maximum readability */
+            margin-bottom: 10px;
+        }
+        header .tagline {
+            font-size: 1.2em;
+            color: #e0e6da; /* Softer off-white for tagline */
+            font-weight: 300;
+            margin-top: 5px;
+        }
+        footer {
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Layout Styles */
+        .content-section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .product-category {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #e7f3e4;
+            border-radius: 8px;
+        }
+        .product-category h2 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            color: #3b6052;
+            border-bottom: 2px solid #a8d5ba;
+            padding-bottom: 5px;
+        }
+        .product-category ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .product-category ul li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .product-category ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #6bbf77;
+            font-size: 1.2em;
+        }
+
+        /* How to Use Section Styles */
+        .how-to-use {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #dfeeea;
+            border-left: 4px solid #4A7C59;
+            border-radius: 5px;
+        }
+
+        /* Additional Styles */
+        p {
+            font-size: 1.1em;
+            color: #666;
+        }
+        footer p {
+            font-size: 0.9em;
+            color: #ddd;
+        }
+        .tagline {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header, .content-section, footer {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Natural Skincare Products</h1>
+        <p class="tagline">Nourish Your Skin Naturally</p>
+    </header>
+
+    <!-- Content Section -->
+    <div class="content-section">
+        <!-- Moisturizers -->
+        <div class="product-category">
+            <h2>Moisturizers</h2>
+            <ul>
+                <li><strong>Aloe Vera Gel:</strong> Hydrates, soothes, and reduces redness.</li>
+                <li><strong>Shea Butter:</strong> Rich in vitamins A and E, great for deep hydration.</li>
+                <li><strong>Jojoba Oil:</strong> Mimics skin's natural oils and is great for sensitive skin.</li>
+            </ul>
+            <div class="how-to-use">
+                <p><strong>How to Use:</strong> Apply a small amount to clean skin, gently massaging until absorbed. Ideal for daily use, especially after cleansing or as a night-time treatment.</p>
+            </div>
+        </div>
+
+        <!-- Cleansers -->
+        <div class="product-category">
+            <h2>Cleansers</h2>
+            <ul>
+                <li><strong>Coconut Oil:</strong> Effectively removes makeup and impurities.</li>
+                <li><strong>Honey:</strong> Antibacterial and moisturizing; ideal for sensitive skin.</li>
+                <li><strong>Apple Cider Vinegar:</strong> Used as a toner to balance skin’s pH.</li>
+            </ul>
+            <div class="how-to-use">
+                <p><strong>How to Use:</strong> Use a small amount and gently massage onto damp skin, then rinse. For toners, apply with a cotton pad after cleansing.</p>
+            </div>
+        </div>
+
+        <!-- Exfoliants -->
+        <div class="product-category">
+            <h2>Exfoliants</h2>
+            <ul>
+                <li><strong>Oatmeal:</strong> Gentle enough for sensitive skin and helps reduce irritation.</li>
+                <li><strong>Sugar and Honey Scrub:</strong> Smoothes and moisturizes.</li>
+                <li><strong>Coffee Grounds:</strong> Reduces cellulite and exfoliates dead skin.</li>
+            </ul>
+            <div class="how-to-use">
+                <p><strong>How to Use:</strong> Apply a small amount to damp skin, massaging in circular motions. Use 1-2 times a week to avoid over-exfoliation.</p>
+            </div>
+        </div>
+
+        <!-- Face Masks -->
+        <div class="product-category">
+            <h2>Face Masks</h2>
+            <ul>
+                <li><strong>Turmeric and Yogurt:</strong> Brightens skin and reduces inflammation.</li>
+                <li><strong>Clay Masks (Bentonite or Kaolin):</strong> Draws out impurities and minimizes pores.</li>
+                <li><strong>Avocado and Honey:</strong> Hydrates deeply and adds a glow.</li>
+            </ul>
+            <div class="how-to-use">
+                <p><strong>How to Use:</strong> Apply an even layer to clean, dry skin and leave on for 10-15 minutes. Rinse with lukewarm water. Use 1-2 times per week.</p>
+            </div>
+        </div>
+
+        <!-- Serums and Oils -->
+        <div class="product-category">
+            <h2>Serums and Oils</h2>
+            <ul>
+                <li><strong>Rosehip Oil:</strong> High in vitamins C and A, good for scars and anti-aging.</li>
+                <li><strong>Tea Tree Oil:</strong> Naturally antibacterial, great for acne-prone skin.</li>
+                <li><strong>Argan Oil:</strong> Lightweight and rich in antioxidants for dry skin.</li>
+            </ul>
+            <div class="how-to-use">
+                <p><strong>How to Use:</strong> Apply a few drops to clean skin, gently pressing into the skin. Ideal for use in the morning or night after moisturizer.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2023 Natural Skincare Products | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
