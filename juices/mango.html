@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Smoothie Recipes | Healthy Blends</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #FF5722;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --card-bg: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            background-color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        .introduction {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .recipe-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .recipe-card {
+            flex: 1;
+            min-width: 300px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        ul {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+        
+        ol {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .nutrition-info {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+        }
+        
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .hero-img, .hero-text {
+                flex: none;
+                width: 100%;
+            }
+            
+            .recipe-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-img">
+                <img src="mango.png" alt="Mango Smoothies">
+            </div>
+            <div class="hero-text">
+                <h1>Mango Smoothie Recipes</h1>
+                <div class="introduction">
+                    <p>Ripe, juicy mangoes make some of the most satisfying smoothies around—naturally sweet, full of vitamins, and ultra-creamy.</p>
+                    <br>
+                    <p>Explore these seven variations using mango, milk, yogurt, cream, and even biscuits for a dessert-like indulgence.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipe-cards">
+            <div class="recipe-card">
+                <div class="card-content">
+                    <h2>Method 1: Classic Mango Shake</h2>
+                    <ul>
+                        <li>210g mango (base)</li>
+                        <li>280g milk</li>
+                        <li>30g sugar</li>
+                    </ul>
+                    <p><strong>Instruction:</strong> Blend mango first, then add milk separately.</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-content">
+                    <h2>Method 2: Mango Banana Yogurt Shake</h2>
+                    <ul>
+                        <li>450g mango</li>
+                        <li>125ml milk</li>
+                        <li>1 banana</li>
+                        <li>1/2 cup yogurt</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-content">
+                    <h2>Method 3: Mango Cream Cooler</h2>
+                    <ul>
+                        <li>1 cup mango</li>
+                        <li>1 cup ice</li>
+                        <li>1 cup milk</li>
+                        <li>Little cream</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-content">
+                    <h2>Method 4: Icy Mango Shake</h2>
+                    <ul>
+                        <li>210g mango</li>
+                        <li>200g ice</li>
+                        <li>160ml milk</li>
+                        <li>30g sugar</li>
+                        <li>Ice cup (optional)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-content">
+                    <h2>Method 5: Mango Cream Biscuit Shake</h2>
+                    <ul>
+                        <li>200g mango</li>
+                        <li>2 tsb or 30g sugar</li>
+                        <li>125ml fresh cream</li>
+                    </ul>
+                    <p><strong>Instruction:</strong> Layer cream, then mango, then biscuit. Repeat layers.</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-content">
+                    <h2>Method 6: Creamy Mango Ice Shake</h2>
+                    <ul>
+                        <li>1 cup mango</li>
+                        <li>1 cup milk</li>
+                        <li>1/2 cup ice</li>
+                    </ul>
+                    <p><strong>Instruction:</strong> Blend and top with cream.</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-content">
+                    <h2>Method 7: Pressed Mango Shake</h2>
+                    <ul>
+                        <li>50g mango (pressed)</li>
+                        <li>59g ice</li>
+                        <li>50g mango (blended)</li>
+                        <li>15g sugar</li>
+                        <li>100ml milk</li>
+                        <li>Extra ice</li>
+                    </ul>
+                    <p><strong>Instruction:</strong> Shake well and serve chilled.</p>
+                </div>
+            </div>
+        </section
+		
+		   <!-- New Thai-style juice methods without milk -->
+    <div class="recipe-card">
+        <div class="card-content">
+            <h2>Method 8: Thai Mango Juice</h2>
+            <ul>
+                <li>2 ripe mangoes (peeled, chopped)</li>
+                <li>1 cup cold water</li>
+                <li>1 tbsp sugar or syrup (optional)</li>
+                <li>Few ice cubes</li>
+            </ul>
+            <p><strong>Instruction:</strong> Blend mango with water, strain for smooth texture, serve chilled over ice.</p>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="card-content">
+            <h2>Method 9: Mango Lime Refresher</h2>
+            <ul>
+                <li>2 cups mango chunks</li>
+                <li>1 cup ice</li>
+                <li>1/2 cup cold water or soda water</li>
+                <li>1 tbsp lime juice</li>
+                <li>1 tbsp honey (optional)</li>
+            </ul>
+            <p><strong>Instruction:</strong> Blend smooth, pour into glass, garnish with lime slice for tropical freshness.</p>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="card-content">
+            <h2>Method 10: Mango Mint Cooler</h2>
+            <ul>
+                <li>1 1/2 cups mango</li>
+                <li>1 cup chilled water</li>
+                <li>Handful of mint leaves</li>
+                <li>1 tbsp sugar (optional)</li>
+                <li>Ice cubes</li>
+            </ul>
+            <p><strong>Instruction:</strong> Blend mango with mint and water, strain, serve cold with mint garnish.</p>
+        </div>
+    </div>
+
+        <section class="benefits">
+            <h2>Health Benefits</h2>
+            <div class="recipe-cards">
+                <div class="recipe-card">
+                    <div class="card-content">
+                        <h3>Mango Benefits</h3>
+                        <ul>
+                            <li>Rich in vitamin A and C for skin and immunity</li>
+                            <li>Contains enzymes that aid digestion</li>
+                            <li>Great source of fiber and antioxidants</li>
+                            <li>Delicious and naturally sweet without added sugar</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="card-content">
+                        <h3>Tips for Mango Smoothies</h3>
+                        <ul>
+                            <li>Use ripe mangoes for best flavor</li>
+                            <li>Chill or freeze mango pieces beforehand</li>
+                            <li>Add a pinch of cardamom for extra aroma</li>
+                            <li>Layer with cream and biscuits for dessert-style shakes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

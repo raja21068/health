@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Flavors | Fruits & Beverages Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #4285f4, #34a853, #fbbc05, #ea4335);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            font-size: 2rem;
+            color: #4285f4;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #4285f4, #34a853);
+            margin: 0.5rem auto;
+            border-radius: 2px;
+        }
+        
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .tab {
+            padding: 0.8rem 1.5rem;
+            margin: 0 0.5rem 1rem;
+            background-color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .tab.active {
+            background-color: #4285f4;
+            color: white;
+            box-shadow: 0 4px 10px rgba(66, 133, 244, 0.3);
+        }
+        
+        .tab:hover:not(.active) {
+            background-color: #f1f3f4;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .card-img {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f3f4;
+        }
+        
+        .card-img img {
+            max-width: 60%;
+            max-height: 60%;
+        }
+        
+        .fruit-icon {
+            font-size: 5rem;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .card-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .card-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #4285f4;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .card-link:hover {
+            background-color: #3367d6;
+        }
+        
+        .search-bar {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .search-container {
+            display: flex;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 50px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .search-input {
+            flex-grow: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            font-size: 1rem;
+            outline: none;
+        }
+        
+        .search-btn {
+            background-color: #4285f4;
+            border: none;
+            color: white;
+            padding: 0 2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .search-btn:hover {
+            background-color: #3367d6;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: #ddd;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: #4285f4;
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Fresh Flavors</div>
+            <div class="tagline">Explore our collection of delicious fruits and refreshing beverages</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search for fruits or beverages...">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+        
+        <h2 class="section-title">Browse Our Collection</h2>
+        
+        <div class="category-tabs">
+            <div class="tab active">All</div>
+            <div class="tab">Fruits</div>
+            <div class="tab">Beverages</div>
+            <div class="tab">Featured</div>
+        </div>
+        
+        <div class="grid">
+            <!-- Fruits -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="watermelon.png" alt="Watermelon">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Watermelon</h3>
+                    <p class="card-desc">Refreshing summer fruit with sweet, juicy flesh.</p>
+                    <a href="watermelon.html" class="card-link">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="strawberries.png" alt="Strawberries">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Strawberries</h3>
+                    <p class="card-desc">Sweet and tangy berries packed with vitamin C.</p>
+                    <a href="strawberries.html" class="card-link">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="mango.png" alt="Mango">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Mango</h3>
+                    <p class="card-desc">The king of fruits with a rich, tropical flavor.</p>
+                    <a href="mango.html" class="card-link">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="lemon.png" alt="Lemon">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Lemon</h3>
+                    <p class="card-desc">Tart citrus fruit used in both sweet and savory dishes.</p>
+                    <a href="lemon.html" class="card-link">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="grapes.png" alt="Grapes">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Grapes</h3>
+                    <p class="card-desc">Small, sweet berries that grow in clusters.</p>
+                    <a href="grapes.html" class="card-link">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="cucumber.png" alt="Cucumber">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Cucumber</h3>
+                    <p class="card-desc">Cool and crisp vegetable with high water content.</p>
+                    <a href="cucumer.html" class="card-link">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="apple.png" alt="Apple">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Apple</h3>
+                    <p class="card-desc">Crisp and versatile fruit available year-round.</p>
+                    <a href="Apple.html" class="card-link">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="banana.png" alt="Banana">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Banana</h3>
+                    <p class="card-desc">Energy-packed fruit with smooth, creamy texture.</p>
+                    <a href="banana.html" class="card-link">Learn More</a>
+                </div>
+            </div>
+			
+			  <div class="card">
+                <div class="card-img">
+                    <img src="banana.png" alt="Banana">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Banana1</h3>
+                    <p class="card-desc">Energy-packed fruit with smooth, creamy texture.</p>
+                    <a href="banana1.html" class="card-link">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="avacoda.png" alt="Avocado">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Avocado</h3>
+                    <p class="card-desc">Nutrient-dense fruit with a buttery flavor.</p>
+                    <a href="Avacoda.html" class="card-link">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Beverages -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="cocktail.png" alt="Cocktail">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Cocktails</h3>
+                    <p class="card-desc">Mixed drinks for special occasions and gatherings.</p>
+                    <a href="cocktail.html" class="card-link">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="cofee.png" alt="Coffee">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Coffee</h3>
+                    <p class="card-desc">Rich and aromatic beverage to start your day.</p>
+                    <a href="cofee.html" class="card-link">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="choclate.png" alt="Chocolate">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Chocolate Drink</h3>
+                    <p class="card-desc">Sweet and comforting beverage for chocolate lovers.</p>
+                    <a href="choclate.html" class="card-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+  
+    
+   
+    
+    <script>
+        // Simple tab functionality
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                // In a real implementation, this would filter the content
+            });
+        });
+    </script>
+</body>
+</html>

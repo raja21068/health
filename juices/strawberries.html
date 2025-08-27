@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Smoothie Recipes | Healthy Blends</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #FF5722;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --card-bg: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            background-color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        .introduction {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .recipe-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .recipe-card {
+            flex: 1;
+            min-width: 300px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        ul {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+        
+        ol {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .nutrition-info {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+        }
+        
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .hero-img, .hero-text {
+                flex: none;
+                width: 100%;
+            }
+            
+            .recipe-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-img">
+                <img src="strawberries.png" alt="Strawberry Smoothies">
+            </div>
+            <div class="hero-text">
+                <h1>Strawberry Smoothie Recipes</h1>
+                <div class="introduction">
+                    <p>Sweet, vibrant, and naturally pink—strawberries are a beloved choice for smoothies. Packed with vitamin C, antioxidants, and fiber, they bring both flavor and nutrition to your glass.</p>
+                    <br>
+                    <p>Below are two simple and delicious strawberry smoothie methods perfect for breakfast or an afternoon treat.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipe-cards">
+            <div class="recipe-card">
+                <div class="card-content">
+                    <h2>Method 1: Syrupy Strawberry Shake</h2>
+                    <ul>
+                        <li>1 cup strawberry</li>
+                        <li>2 tsb sugar</li>
+                        <li>1 tsb Pashto (likely a nut paste or regional flavoring)</li>
+                        <li>1 tsb strawberry syrup</li>
+                        <li>200ml milk</li>
+                    </ul>
+                    <p><strong>Instruction:</strong> Blend all ingredients together until smooth. Serve chilled.</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-content">
+                    <h2>Method 2: Classic Strawberry Milkshake</h2>
+                    <ul>
+                        <li>100g strawberry</li>
+                        <li>2 tsb sugar</li>
+                        <li>Ice (as needed)</li>
+                        <li>200ml milk</li>
+                    </ul>
+                    <p><strong>Instruction:</strong> Blend strawberries, sugar, and ice with milk until frothy. Serve cold.</p>
+                </div>
+            </div>
+			
+			
+			 <div class="recipe-card">
+        <div class="card-content">
+            <h2>Method 3: Strawberry Banana Smoothie</h2>
+            <ul>
+                <li>1 cup strawberries</li>
+                <li>1 ripe banana</li>
+                <li>150ml yogurt (plain or vanilla)</li>
+                <li>1 tsp honey (optional)</li>
+                <li>Ice cubes (as needed)</li>
+            </ul>
+            <p><strong>Instruction:</strong> Blend strawberries, banana, yogurt, and ice until creamy. Add honey for extra sweetness. Perfect for breakfast!</p>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="card-content">
+            <h2>Method 4: Strawberry Oat Energy Shake</h2>
+            <ul>
+                <li>1 cup strawberries</li>
+                <li>3 tbsp rolled oats</li>
+                <li>200ml almond milk (or any milk)</li>
+                <li>1 tsp chia seeds (optional)</li>
+                <li>1 tsp maple syrup or honey</li>
+            </ul>
+            <p><strong>Instruction:</strong> Blend strawberries, oats, and milk until smooth. Stir in chia seeds. A fiber-rich smoothie that keeps you full longer.</p>
+        </div>
+    </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Health Benefits</h2>
+            <div class="recipe-cards">
+                <div class="recipe-card">
+                    <div class="card-content">
+                        <h3>Strawberry Benefits</h3>
+                        <ul>
+                            <li>High in vitamin C and antioxidants</li>
+                            <li>Supports immune health and skin glow</li>
+                            <li>Helps regulate blood sugar levels</li>
+                            <li>Low in calories and naturally sweet</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="card-content">
+                        <h3>Tips for Smoothie Perfection</h3>
+                        <ul>
+                            <li>Use frozen strawberries for a thicker texture</li>
+                            <li>Add yogurt for extra creaminess and probiotics</li>
+                            <li>Sweeten with honey or dates if preferred</li>
+                            <li>Garnish with sliced strawberries or mint</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

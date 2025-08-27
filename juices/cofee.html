@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Smoothie Recipes | Healthy Blends</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #FF5722;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --card-bg: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            background-color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        .introduction {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .recipe-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .recipe-card {
+            flex: 1;
+            min-width: 300px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        ul {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+        
+        ol {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .nutrition-info {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+        }
+        
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .hero-img, .hero-text {
+                flex: none;
+                width: 100%;
+            }
+            
+            .recipe-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-img">
+                <img src="cofee.png" alt="Coffee Smoothies">
+            </div>
+            <div class="hero-text">
+                <h1>Coffee Smoothie Recipes</h1>
+                <div class="introduction">
+                    <p>Get your caffeine fix in a cool and refreshing way with these easy coffee smoothie recipes. Whether you like it chilled, hot, or blended with chocolate, there’s a version here to energize your day.</p>
+                    <br>
+                    <p>Start with the whipped base and explore three creative ways to enjoy coffee as a smoothie!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipe-cards">
+            <div class="recipe-card">
+               
+                <div class="card-content">
+                    <h2>Whipped Coffee Base</h2>
+                    <p>A frothy foundation for any cold coffee smoothie.</p>
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>2 tsb coffee</li>
+                        <li>2 tsb sugar</li>
+                        <li>2 tsb water</li>
+                    </ul>
+                    <h3>Instructions</h3>
+                    <ol>
+                        <li>Whisk all ingredients together until frothy</li>
+                        <li>Use as a topping or stir into cold milk</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+              
+                <div class="card-content">
+                    <h2>Iced Coffee Smoothie</h2>
+                    <p>Simple and classic—just pour over ice and enjoy!</p>
+                    <h3>Steps</h3>
+                    <ol>
+                        <li>Add ice cubes to a glass</li>
+                        <li>Pour in milk</li>
+                        <li>Top with the whipped coffee base</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+              
+                <div class="card-content">
+                    <h2>Hot Coffee Smoothie</h2>
+                    <p>A cozy drink for coffee lovers who want warmth and froth in one.</p>
+                    <h3>Steps</h3>
+                    <ol>
+                        <li>Add the whipped coffee to hot milk</li>
+                        <li>Stir and enjoy your hot, fluffy blend</li>
+                        <li>Repeat for a second serving!</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+              
+                <div class="card-content">
+                    <h2>Chocolate Coffee Smoothie</h2>
+                    <p>A dessert-style cold coffee shake with a chocolate twist.</p>
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>Chocolate syrup in glass</li>
+                        <li>5 ice cubes</li>
+                        <li>Cold milk</li>
+                        <li>Whipped coffee topping</li>
+                    </ul>
+                    <h3>Instructions</h3>
+                    <ol>
+                        <li>Line glass with chocolate syrup</li>
+                        <li>Add ice and milk</li>
+                        <li>Top with whipped coffee</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Why You'll Love It</h2>
+            <div class="recipe-cards">
+                <div class="recipe-card">
+                    <div class="card-content">
+                        <h3>Coffee Benefits</h3>
+                        <ul>
+                            <li>Boosts alertness and focus</li>
+                            <li>Contains antioxidants</li>
+                            <li>May enhance physical performance</li>
+                            <li>Can help improve mood and metabolism</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="card-content">
+                        <h3>Smoothie Tips</h3>
+                        <ul>
+                            <li>Use chilled or frozen milk for a better texture</li>
+                            <li>Add a scoop of protein powder for an energizing boost</li>
+                            <li>Sprinkle cocoa powder or cinnamon for extra flavor</li>
+                            <li>Adjust sweetness by varying the sugar or syrup used</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

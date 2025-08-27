@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Smoothie Recipes | Healthy Blends</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #FF5722;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --card-bg: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            background-color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        .introduction {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .recipe-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .recipe-card {
+            flex: 1;
+            min-width: 300px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        ul {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+        
+        ol {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .nutrition-info {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+        }
+        
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .hero-img, .hero-text {
+                flex: none;
+                width: 100%;
+            }
+            
+            .recipe-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-img">
+                <img src="watermelon.png" alt="Watermelon Smoothies">
+            </div>
+            <div class="hero-text">
+                <h1>Watermelon Smoothie Recipes</h1>
+                <div class="introduction">
+                    <p>Juicy, cooling, and hydrating—watermelon is a summertime favorite that makes an excellent base for smoothies and drinks.</p>
+                    <br>
+                    <p>These three watermelon-based drink methods mix herbs, citrus, and even fizzy soda for ultimate refreshment!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipe-cards">
+            <div class="recipe-card">
+                <div class="card-content">
+                    <h2>Method 1: Lemon Mint Watermelon</h2>
+                    <ul>
+                        <li>Watermelon (cubed or blended)</li>
+                        <li>Mint leaves</li>
+                        <li>Lemon juice</li>
+                        <li>Ice and sugar (to taste)</li>
+                    </ul>
+                    <p><strong>Instruction:</strong> Blend all ingredients until smooth and serve cold.</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-content">
+                    <h2>Method 2: Simple Watermelon Refresher</h2>
+                    <ul>
+                        <li>1 cup watermelon</li>
+                        <li>2 tsb sugar</li>
+                        <li>2 tsb mint leaves</li>
+                        <li>1/2 cup cold water</li>
+                    </ul>
+                    <p><strong>Instruction:</strong> Blend and serve immediately. Garnish with extra mint leaves if desired.</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-content">
+                    <h2>Method 3: Fizzy Citrus Watermelon Juice</h2>
+                    <ul>
+                        <li>Small amount of orange juice</li>
+                        <li>Mint leaves</li>
+                        <li>Lemon juice</li>
+                        <li>Orange push (concentrate or blend)</li>
+                        <li>1/2 glass Sprite</li>
+                        <li>Watermelon juice</li>
+                    </ul>
+                    <p><strong>Instruction:</strong> Mix ingredients well and serve chilled for a fizzy tropical drink.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Health Benefits</h2>
+            <div class="recipe-cards">
+                <div class="recipe-card">
+                    <div class="card-content">
+                        <h3>Watermelon Benefits</h3>
+                        <ul>
+                            <li>Extremely hydrating (over 90% water)</li>
+                            <li>Rich in lycopene, a powerful antioxidant</li>
+                            <li>Supports heart and skin health</li>
+                            <li>Low in calories and high in vitamin C</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="card-content">
+                        <h3>Smoothie Tips</h3>
+                        <ul>
+                            <li>Use seedless watermelon for easier blending</li>
+                            <li>Freeze cubes for a slushy texture</li>
+                            <li>Add basil or ginger for an exotic twist</li>
+                            <li>Serve in chilled glasses with a lime wedge</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

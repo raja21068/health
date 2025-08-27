@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Smoothie Recipes | Healthy Blends</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #FF5722;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --card-bg: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            background-color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        .introduction {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .recipe-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .recipe-card {
+            flex: 1;
+            min-width: 300px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        ul {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+        
+        ol {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .nutrition-info {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+        }
+        
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .hero-img, .hero-text {
+                flex: none;
+                width: 100%;
+            }
+            
+            .recipe-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-img">
+                <img src="cocktail.png" alt="Fruit Cocktail Recipes">
+            </div>
+            <div class="hero-text">
+                <h1>Fruit Cocktail Recipes</h1>
+                <div class="introduction">
+                    <p>Cool off with a refreshing mix of fruits, herbs, and a splash of your favorite spirits. These cocktail recipes are perfect for parties, summer evenings, or whenever you're in the mood for a fresh twist on hydration.</p>
+                    <br>
+                    <p>Try several creative combinations using mint, citrus, melon, and more—some with alcohol, some without!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipe-cards">
+            <div class="recipe-card">
+              
+                <div class="card-content">
+                    <h2>Mint Lime Vodka Cocktail</h2>
+                    <p>A bright, zesty mix of lime juice and mint with vodka and soda water.</p>
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>23ml lime juice</li>
+                        <li>10 mint leaves</li>
+                        <li>60ml vodka or wine</li>
+                        <li>Splash of soda water</li>
+                        <li>30ml simple syrup</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+               
+                <div class="card-content">
+                    <h2>Cranberry Cointreau Cocktail</h2>
+                    <p>Tart and tangy with a punch of orange liqueur and fresh lime.</p>
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>30ml lime juice</li>
+                        <li>30ml cranberry juice</li>
+                        <li>30ml Cointreau</li>
+                        <li>60ml vodka or wine</li>
+                        <li>Ice cubes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+              
+                <div class="card-content">
+                    <h2>Melon Cucumber Wine Mix</h2>
+                    <p>Cool and fruity with fresh melon, cucumber, lime, and white wine.</p>
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>Few cubes watermelon</li>
+                        <li>Few slices cucumber</li>
+                        <li>22.5ml lime juice</li>
+                        <li>7.5ml simple syrup</li>
+                        <li>45ml white wine</li>
+                        <li>Ice cubes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Why You’ll Love These</h2>
+            <div class="recipe-cards">
+                <div class="recipe-card">
+                    <div class="card-content">
+                        <h3>Cocktail Perks</h3>
+                        <ul>
+                            <li>Perfect for entertaining guests</li>
+                            <li>Customizable with or without alcohol</li>
+                            <li>Can be made light and refreshing</li>
+                            <li>Incorporates hydrating fruits and herbs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="card-content">
+                        <h3>Tips for Better Cocktails</h3>
+                        <ul>
+                            <li>Use fresh lime juice for more vibrant flavor</li>
+                            <li>Chill glasses beforehand</li>
+</html>

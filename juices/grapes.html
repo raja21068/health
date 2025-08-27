@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grape Juice Recipes | Healthy Blends</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #9C27B0;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --card-bg: #fff;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav {
+            background-color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .hero-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        .introduction {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        .recipe-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .recipe-card {
+            flex: 1;
+            min-width: 300px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-content {
+            padding: 1.5rem;
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        ul {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+        ol {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        @media screen and (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+            .hero-img, .hero-text {
+                flex: none;
+                width: 100%;
+            }
+            .recipe-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-img">
+                <img src="grapes.png" alt="Grape Juice">
+            </div>
+            <div class="hero-text">
+                <h1>Fresh Grape Juice Recipe</h1>
+                <div class="introduction">
+                    <p>Sweet, juicy grapes make for a refreshing and vibrant juice. Packed with antioxidants, vitamins, and natural sweetness, grape juice is a healthy and energizing drink for any occasion.</p>
+                    <br>
+                    <p>This easy recipe is quick, refreshing, and perfect for both kids and adults.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipe-cards">
+            <div class="recipe-card">
+               
+                <div class="card-content">
+                    <h2>Simple Grape Juice</h2>
+                    <p>Just a few ingredients for a refreshing homemade juice.</p>
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>3 cups fresh grapes (red, black, or green)</li>
+                        <li>1 cup cold water (or sparkling water for fizz)</li>
+                        <li>1–2 tbsp sugar or honey (optional)</li>
+                        <li>1 tbsp lemon juice (optional)</li>
+                        <li>Ice cubes (optional)</li>
+                    </ul>
+                    <h3>Instructions</h3>
+                    <ol>
+                        <li>Wash the grapes thoroughly.</li>
+                        <li>Add grapes and water to a blender, blend until smooth.</li>
+                        <li>Strain the mixture through a fine sieve or cheesecloth.</li>
+                        <li>Stir in sugar/honey and lemon juice if desired.</li>
+                        <li>Serve chilled over ice cubes and enjoy!</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Health Benefits</h2>
+            <div class="recipe-cards">
+                <div class="recipe-card">
+                    <div class="card-content">
+                        <h3>Grape Juice Benefits</h3>
+                        <ul>
+                            <li>Rich in antioxidants like resveratrol</li>
+                            <li>Supports heart and brain health</li>
+                            <li>Hydrating and vitamin-rich (C & K)</li>
+                            <li>Natural boost of quick energy</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="card-content">
+                        <h3>Tips for Best Juice</h3>
+                        <ul>
+                            <li>Use seedless grapes for smoother juice</li>
+                            <li>Chill or freeze grapes before blending for extra freshness</li>
+                            <li>Add a squeeze of lemon for tanginess</li>
+                            <li>Mix with apples or berries for unique flavors</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
