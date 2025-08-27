@@ -1,254 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salad Recipe Collection</title>
-    <style>
-        /* --- same styling you gave --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .header::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            border-radius: 2px;
-        }
-
-        h1 {
-            font-size: 3.5em;
-            color: #2d3748;
-            margin-bottom: 10px;
-            font-weight: 300;
-            letter-spacing: -1px;
-        }
-
-        .subtitle {
-            font-size: 1.2em;
-            color: #718096;
-            font-style: italic;
-        }
-
-        .recipe-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .recipe-card {
-            background: #fff;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .recipe-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, #48bb78, #38b2ac);
-        }
-
-        .recipe-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .recipe-card h2 {
-            font-size: 1.8em;
-            color: #2d3748;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .method-number {
-            background: linear-gradient(135deg, #48bb78, #38b2ac);
-            color: white;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9em;
-            font-weight: bold;
-        }
-
-        .recipe-steps {
-            list-style: none;
-        }
-
-        .recipe-steps li {
-            padding: 12px 0;
-            border-bottom: 1px solid #f7fafc;
-            position: relative;
-            padding-left: 40px;
-            line-height: 1.6;
-            color: #4a5568;
-        }
-
-        .recipe-steps li:last-child {
-            border-bottom: none;
-        }
-
-        .recipe-steps li::before {
-            content: attr(data-step);
-            position: absolute;
-            left: 0;
-            top: 12px;
-            background: #e2e8f0;
-            color: #4a5568;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8em;
-            font-weight: bold;
-        }
-
-        .ingredients {
-            font-weight: 500;
-            color: #2d3748;
-        }
-
-        .note {
-            background: linear-gradient(135deg, #fef5e7, #fed7aa);
-            border-left: 4px solid #f6ad55;
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 0 10px 10px 0;
-            font-style: italic;
-            color: #744210;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-                margin: 10px;
-            }
-
-            h1 {
-                font-size: 2.5em;
-            }
-
-            .recipe-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .recipe-card {
-                padding: 20px;
-            }
-        }
-
-        .ingredients-highlight {
-            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-            padding: 2px 6px;
-            border-radius: 4px;
-            margin: 0 1px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popular Salad Recipes | Fresh & Healthy</title>
+  <style>
+    :root {
+      --primary-color: #4CAF50;
+      --secondary-color: #FF9800;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+      --card-bg: #fff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .hero-img {
+      flex: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 400px;
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-text {
+      flex: 1;
+    }
+    h1 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+    }
+    .introduction {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+    .recipe-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .recipe-card {
+      flex: 1;
+      min-width: 300px;
+      background: var(--card-bg);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .recipe-card:hover {
+      transform: translateY(-5px);
+    }
+    .card-content {
+      padding: 1.5rem;
+    }
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    h3 {
+      color: var(--secondary-color);
+      margin-bottom: 0.5rem;
+    }
+    ul, ol {
+      list-style-position: inside;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    @media screen and (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+      .hero-img, .hero-text {
+        flex: none;
+        width: 100%;
+      }
+      .recipe-card {
+        min-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Salad Recipe Collection</h1>
-            <p class="subtitle">Refreshing global & Asian salads you’ll love</p>
+  <header>
+    <h1>Fresh & Popular Salad Recipes</h1>
+  </header>
+  <div class="container">
+    <section class="hero">
+      <div class="hero-img">
+        <img src="salad.png" alt="Fresh Salad" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="hero-text">
+        <h1>Healthy Salads for Every Occasion</h1>
+        <div class="introduction">
+          <p>Salads are colorful, versatile, and packed with nutrients. From creamy Russian Salad to refreshing Asian-style dishes, these recipes bring a burst of freshness to your plate.</p>
+          <br>
+          <p>Here are some popular and easy-to-make salad recipes loved worldwide.</p>
         </div>
+      </div>
+    </section>
 
-        <div class="recipe-grid">
-            <!-- Russian Salad -->
-            <div class="recipe-card">
-                <h2><span class="method-number">1</span> Russian Salad (Olivier Salad)</h2>
-                <ul class="recipe-steps">
-                    <li data-step="1"><span class="ingredients">Ingredients:</span> Boiled potatoes, carrots, peas, diced apples, boiled eggs, mayo, salt, and pepper.</li>
-                    <li data-step="2">Chop boiled potatoes, carrots, and eggs into cubes.</li>
-                    <li data-step="3">Mix with peas, apples, and mayonnaise.</li>
-                    <li data-step="4">Season with salt and pepper. Chill before serving.</li>
-                </ul>
-                <div class="note">A creamy & classic salad, perfect for parties.</div>
-            </div>
-
-            <!-- Asian Sesame Salad -->
-            <div class="recipe-card">
-                <h2><span class="method-number">2</span> Asian Sesame Salad</h2>
-                <ul class="recipe-steps">
-                    <li data-step="1"><span class="ingredients">Ingredients:</span> Lettuce, shredded cabbage, carrots, cucumbers, sesame seeds, soy sauce, sesame oil, lime juice.</li>
-                    <li data-step="2">Chop all vegetables thinly.</li>
-                    <li data-step="3">Whisk soy sauce, sesame oil, and lime juice for dressing.</li>
-                    <li data-step="4">Toss veggies with dressing & sprinkle sesame seeds.</li>
-                </ul>
-                <div class="note">Crisp, tangy & nutty – a light Asian favorite!</div>
-            </div>
-
-            <!-- Thai Green Papaya Salad -->
-            <div class="recipe-card">
-                <h2><span class="method-number">3</span> Thai Green Papaya Salad (Som Tam)</h2>
-                <ul class="recipe-steps">
-                    <li data-step="1"><span class="ingredients">Ingredients:</span> Shredded green papaya, cherry tomatoes, green beans, chili, garlic, lime juice, fish sauce, peanuts.</li>
-                    <li data-step="2">Pound garlic & chili in mortar for paste.</li>
-                    <li data-step="3">Add lime juice, fish sauce, and palm sugar.</li>
-                    <li data-step="4">Mix with shredded papaya, beans, and tomatoes. Garnish with peanuts.</li>
-                </ul>
-                <div class="note">A spicy, tangy Thai street food classic.</div>
-            </div>
-
-            <!-- Greek Salad -->
-            <div class="recipe-card">
-                <h2><span class="method-number">4</span> Greek Salad</h2>
-                <ul class="recipe-steps">
-                    <li data-step="1"><span class="ingredients">Ingredients:</span> Cucumbers, cherry tomatoes, red onion, olives, feta cheese, oregano, olive oil.</li>
-                    <li data-step="2">Chop cucumbers, tomatoes, and onion into chunks.</li>
-                    <li data-step="3">Mix with olives and olive oil.</li>
-                    <li data-step="4">Top with feta cubes & sprinkle oregano.</li>
-                </ul>
-                <div class="note">A Mediterranean favorite – fresh & zesty!</div>
-            </div>
+    <section class="recipe-cards">
+      <div class="recipe-card">
+        <div class="card-content">
+          <h2>1. Russian Salad</h2>
+          <ul>
+            <li>1 cup boiled potatoes & peas</li>
+            <li>1/2 cup carrots (boiled & diced)</li>
+            <li>1/2 cup pineapple chunks</li>
+            <li>1/2 cup mayonnaise</li>
+            <li>Salt & pepper to taste</li>
+          </ul>
+          <p><strong>Instruction:</strong> Mix boiled vegetables and pineapple with mayonnaise. Season with salt and pepper. Chill before serving.</p>
         </div>
-    </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="card-content">
+          <h2>2. Greek Salad</h2>
+          <ul>
+            <li>1 cucumber (sliced)</li>
+            <li>2 tomatoes (chopped)</li>
+            <li>1/2 red onion (sliced)</li>
+            <li>1/2 cup feta cheese</li>
+            <li>Olives, olive oil, oregano</li>
+          </ul>
+          <p><strong>Instruction:</strong> Combine all veggies in a bowl, drizzle with olive oil, sprinkle oregano, and top with feta cheese.</p>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="card-content">
+          <h2>3. Caesar Salad</h2>
+          <ul>
+            <li>Romaine lettuce</li>
+            <li>Croutons</li>
+            <li>Grated parmesan cheese</li>
+            <li>Caesar dressing</li>
+            <li>Optional: grilled chicken</li>
+          </ul>
+          <p><strong>Instruction:</strong> Toss lettuce with Caesar dressing, top with croutons, parmesan, and chicken if desired.</p>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="card-content">
+          <h2>4. Fruit Salad</h2>
+          <ul>
+            <li>Seasonal fruits (apple, banana, mango, grapes)</li>
+            <li>1 tbsp honey</li>
+            <li>1 tbsp lemon juice</li>
+            <li>Mint leaves for garnish</li>
+          </ul>
+          <p><strong>Instruction:</strong> Chop fruits, mix with honey and lemon juice. Chill and garnish with mint leaves.</p>
+        </div>
+      </div>
+
+      <!-- Asian Salads -->
+      <div class="recipe-card">
+        <div class="card-content">
+          <h2>5. Thai Papaya Salad (Som Tum)</h2>
+          <ul>
+            <li>1 cup shredded raw papaya</li>
+            <li>1 tomato (chopped)</li>
+            <li>2 tbsp roasted peanuts</li>
+            <li>2 tbsp lime juice</li>
+            <li>1 tbsp fish sauce or soy sauce</li>
+            <li>1 chili (crushed)</li>
+          </ul>
+          <p><strong>Instruction:</strong> Mix papaya, tomato, chili, lime juice, and sauce in a bowl. Top with roasted peanuts and serve fresh.</p>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="card-content">
+          <h2>6. Japanese Cucumber Salad (Sunomono)</h2>
+          <ul>
+            <li>2 cucumbers (thinly sliced)</li>
+            <li>2 tbsp rice vinegar</li>
+            <li>1 tbsp soy sauce</li>
+            <li>1 tsp sugar</li>
+            <li>1 tsp sesame seeds</li>
+          </ul>
+          <p><strong>Instruction:</strong> Mix vinegar, soy sauce, and sugar. Add cucumber slices, toss gently, and sprinkle sesame seeds before serving.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <h2>🥗 Why Salads are Great</h2>
+      <div class="recipe-cards">
+        <div class="recipe-card">
+          <div class="card-content">
+            <h3>Health Benefits</h3>
+            <ul>
+              <li>Rich in vitamins, minerals, and fiber</li>
+              <li>Boosts digestion and hydration</li>
+              <li>Low in calories, great for weight management</li>
+              <li>Supports heart and skin health</li>
+            </ul>
+          </div>
+        </div>
+        <div class="recipe-card">
+          <div class="card-content">
+            <h3>Tips for Perfect Salads</h3>
+            <ul>
+              <li>Use fresh, seasonal vegetables and fruits</li>
+              <li>Add nuts or seeds for crunch</li>
+              <li>Balance flavors with a simple dressing</li>
+              <li>Serve chilled for best taste</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
